@@ -1,28 +1,27 @@
 #include "logic.h"
 
 double calculate_avg_mark(int marks[], int size) {
-
+	for (int i = 0; i < size; i++)
+	{
+		avg += marks[i];
+	}
+	return 
 }
 
-string find_best_class(int classA[], int classB[], int classC[], int size) {
-	string best_class = "Class A";
-
-	double avgA = calculate_avg_mark(classA, size);
-	double avgB = calculate_avg_mark(classB, size);
-	double avgC = calculate_avg_mark(classC, size);
-
-	int count = 3;
-	double averages[]{ avgA, avgB, avgC };
-	char classes[]{ 'A', 'B', 'C' };
+string find_best_class(int classes[DEFAULT_SIZE][DEFAULT_SIZE], int n, int m) {
+	double averages[DEFAULT_SIZE];
+	for (int i = 0; i < n; i++)
+	{
+		averages[i] = calculate_avg_mark(classes[i], m);
+	}
 
 	int index = 0;
-	string cl = to_string(classes[0]);
-	for (int i = 1; i < count; i++)
+
+	for (int i = 0; i < n; i++)
 	{
-		if (averages[index] < averages[i]){
-			index =i;
-			cl = classes[i];
-			}
+		if (averages[index] < averages[i]) {
+			index = i;
+		}
 	}
-	return "class" + cl;
+	return "class" + to_string((char)to_string('A'));
 }

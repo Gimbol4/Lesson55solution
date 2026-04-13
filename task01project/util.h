@@ -1,3 +1,4 @@
 #include "logic.h"
 
-int init_marks(int classA[], int classB[], int classC[], int size);
+void init_marks(int marks[DEFAULT_SIZE][DEFAULT_SIZE], int n, int m);
+string convert(int marks[DEFAULT_SIZE][DEFAULT_SIZE], int n, int m);
