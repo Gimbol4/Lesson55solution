@@ -1,5 +1,3 @@
-#include <iostream>
-#include <string>
-using namespace std;
-#define DEFAULT_SIZE 30
+#include "logic.h"
 
+int init_marks(int classA[], int classB[], int classC[], int size);

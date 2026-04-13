@@ -14,6 +14,6 @@ int main() {
 	init_marks(classB, size);
 	init_marks(classC, size);
 
-	string best_class = find_best_class(classA, classB, classC, size)
+	string best_class = find_best_class(classA, classB, classC, size);
 
 }
